@@ -1,0 +1,27 @@
+# WordPress-era addresses the frozen copy does not have. The old site answered
+# them with the home page (index.php) or an RSS feed; readers and search
+# engines still ask for them, so send each to the page it belonged to.
+/index.php / 301
+/index.php/* /:splat 301
+/feed / 301
+/feed/ / 301
+/feed/* / 301
+/rss / 301
+/rss/ / 301
+/comments/feed / 301
+/comments/feed/ / 301
+# placeholder rules win over literal ones, so /comments/feed/ lands on /comments/ first
+/comments / 301
+/comments/ / 301
+/:a/comments /:a/ 301
+/:a/comments/ /:a/ 301
+/:a/feed /:a/ 301
+/:a/feed/ /:a/ 301
+/:a/:b/feed /:a/:b/ 301
+/:a/:b/feed/ /:a/:b/ 301
+/:a/:b/:c/feed /:a/:b/:c/ 301
+/:a/:b/:c/feed/ /:a/:b/:c/ 301
+/:a/:b/:c/:d/feed /:a/:b/:c/:d/ 301
+/:a/:b/:c/:d/feed/ /:a/:b/:c/:d/ 301
+/:a/:b/:c/:d/:e/feed /:a/:b/:c/:d/:e/ 301
+/:a/:b/:c/:d/:e/feed/ /:a/:b/:c/:d/:e/ 301
